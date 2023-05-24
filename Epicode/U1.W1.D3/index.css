@@ -30,8 +30,16 @@ header {
 #logo{
     width: 230px;
 }
-#conteiner{
 
+nav{
+    font-weight: bold;
+    color: brown;
+    
+}
+
+.link{
+    color: rgb(18, 155, 165);
+    text-underline-position: below;
 }
 
 main{
@@ -41,4 +49,27 @@ main{
     flex-direction: column;
     justify-content: center;
 
+}
+footer{
+    margin-right: 25vw;
+    margin-left: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.description{
+    text-align: center;
+    color: gray;
+    font-weight: bold;
+    
+}
+hr{
+    color: cyan;
+}
+header p{
+    font-size: small;
+    background-color: rgba(221, 211, 120, 0.233);
+    color: rgb(11, 121, 93);
+    font-weight: bold;
 }
