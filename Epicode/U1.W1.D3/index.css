@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+
+html{
+    font-family: 'Libre Baskerville', serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+header {
+    text-align: center;
+   
+}
+#logo{
+    width: 230px;
+}
+#conteiner{
+
+}
+
+main{
+    margin-right: 25vw;
+    margin-left: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
