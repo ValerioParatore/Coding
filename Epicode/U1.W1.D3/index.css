@@ -68,8 +68,9 @@ hr{
 border-color: darkcyan;
 }
 header p{
-    font-size: small;
-    background-color: rgba(221, 211, 120, 0.233);
-    color: rgb(11, 121, 93);
-    font-weight: bold;
+    padding: 10px;
+    margin: 0px;
+    background-color: lightyellow;
+    color: #148fb8;
+    border-top: 2px rgb(204, 77, 38);
 }
