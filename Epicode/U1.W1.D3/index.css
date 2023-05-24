@@ -25,6 +25,7 @@ html{
 
 header {
     text-align: center;
+
    
 }
 #logo{
@@ -42,21 +43,16 @@ nav{
     text-underline-position: below;
 }
 
-main{
-    margin-right: 25vw;
-    margin-left: 25vw;
+#conteiner{
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    margin-left: auto;
+    margin-right: auto;
+    width: 30vw;
 }
-footer{
-    margin-right: 25vw;
-    margin-left: 25vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
+main img{
+    width: 100%;
 }
 .description{
     text-align: center;
@@ -72,5 +68,5 @@ header p{
     margin: 0px;
     background-color: lightyellow;
     color: #148fb8;
-    border-top: 2px rgb(204, 77, 38);
+   
 }
