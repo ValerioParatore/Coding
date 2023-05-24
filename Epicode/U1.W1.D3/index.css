@@ -65,7 +65,7 @@ footer{
     
 }
 hr{
-    color: cyan;
+border-color: darkcyan;
 }
 header p{
     font-size: small;
