@@ -133,10 +133,11 @@ hr{
 #logo{
     background-image: url(../assets/logo.svg);
     width: 300px;
-    height: 100px;
+    height: 80px;
     margin-right: auto;
     margin-left: auto;
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
     padding: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
