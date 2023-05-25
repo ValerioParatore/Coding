@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');
+
+html{
+    font-family: 'Poppins', sans-serif;
+}
+h1{
+    font-size: 1.7em;
+    font-weight: bold;
+    margin: 12px;
+}
+h2{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 12px;
+}
+h3{
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 12px;
+    color: white;
+
+}
+p{
+    margin: 12px;
+}
+#conteiner{
+    width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+    background-image: url(../assets/assets/img/sfondo.png);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+    background-position: 50% 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    box-shadow:5px 5px 5px #00000088;
+}
+
+header{
+    
+    text-align: center;
+    height: 300px;
+    width: 370px;
+    background-color: rgb(3, 99, 138);
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 5px #00000088;
+}
+
+main{
+    background-color: white;
+    max-width: 370px;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 5px 5px 5px #00000088;
+}
+section{
+    margin: 10px;
+}
+#a-c{
+    padding-bottom: 12px;
+}
+
+#newsletter{
+background-color: lightgray;
+padding-top: 12px;
+padding-bottom: 12px;
+margin: 12px;
+}
+#a-c > div{
+    margin: 18px;
+    background-color: lightgray;
+}
+
+footer{
+    background-color: rgb(3, 99, 138);
+    width: 370px;
+    margin-top: 10px;
+    margin-bottom: 14px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 12px;
+padding-bottom: 12px;
+box-shadow: 5px 5px 5px #00000088;
+}
+h2,ul,ol,table,#a-c,footer,form{
+    text-align: center;
+}
+table{
+    max-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+thead{
+    background-color: rgb(49, 89, 177);
+    color: white;
+    height: 60px;
+}
+th{
+    background-color: rgb(49, 89, 177);
+    margin: 8px;
+}
+tr:nth-of-type(2),tr:nth-of-type(4){
+    background-color: lightgray;
+}
+td{
+    height: 40px;
+}
+caption{
+    font-weight: bold;
+    font-style: italic;
+}
+li{
+    max-width: 280px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+strong{
+    font-weight: bolder;
+    color: purple;
+}
+hr{
+    border-color: blue;
+}
+#logo{
+    background-image: url(../assets/logo.svg);
+    width: 300px;
+    height: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    background-size: cover;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+
+}
