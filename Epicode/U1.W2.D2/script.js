@@ -23,7 +23,7 @@ else {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 let n = 20
-if((n > 5)||(n <5)){
+if(n !== 5){
     console.log("not equal")
 }
 
@@ -41,14 +41,8 @@ if(n % 5 === 0){
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-if((n1 === 8)||(n2 === 8)){
+if(n1 === 8||n2 === 8 || n1 + n2 === 8 || n1 - n2 === 8){
     console.log("uguale 8")
-}
-else if(n1 + n2 === 8){
-    console.log("addizione uguale 8")
-}
-else if ( n1 - n2 === 8){
-    console.log("sottrazione uguale 8")
 }
 
 /* ESERCIZIO 5
@@ -59,11 +53,13 @@ else if ( n1 - n2 === 8){
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 let totalShoppingCart = 64
+let shippingCost = 10
+let checkout
 if(totalShoppingCart > 50){
     checkout = totalShoppingCart 
 }
 else if( totalShoppingCart < 50){
-    checkout = totalShoppingCart + 10
+    checkout = totalShoppingCart + shippingCost
 }
 
 /* ESERCIZIO 6
@@ -77,7 +73,7 @@ if(totalShoppingCart > 50){
     checkout = totalShoppingCart 
 }
 else if( totalShoppingCart < 50){
-    checkout = totalShoppingCart + 10
+    checkout = totalShoppingCart + totalShoppingCart
 }
 
 /* ESERCIZIO 7
@@ -178,6 +174,6 @@ console.log(me)
   */
   
   /* SCRIVI QUI LA TUA RISPOSTA */
-  numbers.pop()
-  numbers.push(100)
+  numbers[9]=100
+  
   console.log(numbers)
