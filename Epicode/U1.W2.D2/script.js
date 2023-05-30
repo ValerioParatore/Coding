@@ -89,7 +89,7 @@ else if( totalShoppingCart < 50){
 /* SCRIVI QUI LA TUA RISPOSTA */
 let saldo1 = 15
 let saldo2 = 32
-let saldo3 = 6
+let saldo3 = 7
 
 
 
