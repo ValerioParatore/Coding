@@ -125,6 +125,11 @@ const starWarsCharacters = [
 
  for(i =0; i < starWarsCharacters.length; i++){
     if(starWarsCharacters[i].gender === "female"){
+        delete starWarsCharacters[i].birth_year
+        delete starWarsCharacters[i].skin_color
+        delete starWarsCharacters[i].gender
+        delete starWarsCharacters[i].height
+        
         femaleCharacters.push(starWarsCharacters[i])
     }
  }
@@ -146,22 +151,22 @@ const starWarsCharacters = [
     Utilizza uno switch statement per inserire uno ad uno gli oggetti dei personaggi di "starWarsCharacters" negli array relativi al colore degli occhi precedentemente creati.
     Ogni personaggio dovrà finire nell'array corrispondente al suo colore degli occhi (al valore della sua proprietà "eye_color").
   */
-for(i = 0; i < starWarsCharacters.length, i++;) {
+for(let i = 0; i < starWarsCharacters.length; i++) {
   switch(starWarsCharacters[i].eye_color) {
     case 'blue':
-        eyeColor.blue.push(starWarsCharacters[i].name)
+        eyeColor.blue.push(starWarsCharacters[i])
         break
     case  "yello":
-        eyeColor.yellow.push(starWarsCharacters[i].name) 
+        eyeColor.yellow.push(starWarsCharacters[i]) 
         break
     case  'brown':
-        eyeColor.brown.push(starWarsCharacters[i].name)
+        eyeColor.brown.push(starWarsCharacters[i])
         break
     case  'red':
-        eyeColor.red.push(starWarsCharacters[i].name)
+        eyeColor.red.push(starWarsCharacters[i])
         break         
     case  'blue-gray':
-        eyeColor.blueGray.push(starWarsCharacters[i].name)
+        eyeColor.blueGray.push(starWarsCharacters[i])
         break    
 
   }
@@ -191,17 +196,17 @@ console.log(eyeColor);
   
     Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
   */
- switch(crewMass) {
+ switch(true) {
     case crewMass < 500 :
         console.log("Ship is under loaded");
         break
     case  crewMass === 500 :
         console.log("Ship is half loaded");
         break
-    case crewMass > 700 :
+    case crewMass > 700 && crewMass <= 900 :
         console.log("warning: Load is over 700");
         break
-    case crewMass > 900 :
+    case crewMass > 900 && crewMass <= 1000:
         console.log("Critical load: over 900");
         break
     case crewMass > 1000 :
