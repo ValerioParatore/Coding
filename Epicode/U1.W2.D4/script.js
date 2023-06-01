@@ -71,7 +71,7 @@ console.log(boundary(76));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 const epify = function(string) {
-    if(string === "EPICODE"){
+    if(string.slice(0,7) === "EPICODE"){
         return string
     } else{
         return "EPICODE" + string
