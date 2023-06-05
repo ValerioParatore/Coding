@@ -25,6 +25,7 @@ const arrayN10 = function(){
 }
 let ran = arrayN10()
 console.log(ran);
+
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
