@@ -4,11 +4,11 @@
 */
 const concArray = function(string1,string2){
     let str1 = string1.slice(0,2)
-    let str2 = string2.slice(-4,-1)
+    let str2 = string2.slice(-4)
     return str1 + str2
 }
 let concString = concArray("Mario","Rossi")
-console.log(concString);
+console.log(concString.toUpperCase());
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
@@ -17,7 +17,7 @@ const arrayN10 = function(){
     let randomArray = []
     
     for( let i=0; i < 11; i++){
-        let randomN = Math.floor(Math.random() * 100)
+        let randomN = Math.floor(Math.random() * 101)
         randomArray.push(randomN)
     }
     return randomArray
@@ -199,9 +199,16 @@ const movies = [
     Scrivi una funzione per trovare il film più vecchio nell'array fornito.
   */
   
-let oldestMovie = movies.forEach((Year)=> Year>Year)
-console.log(oldestMovie);
-
+let oldestMovie = function(){
+  let oldest = movies[0]
+  movies.forEach(movie => {
+    pareInt(movie.Year) < parseInt(oldest) 
+    {
+      oldest = movie
+    }
+  })
+}
+console.log(oldestMovie());
   /* ESERCIZIO 10
     Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
   */
