@@ -11,8 +11,14 @@ TaskForm.addEventListener('submit', function(e){
     const savedTaskDiv = document.getElementById("saved-task")
     savedTaskDiv.appendChild(newTaskCard)
 
-    taskText.value = ""
-
+    taskText.value = ""  
+    let pTask = document.querySelectorAll('p')
+    pTask.forEach(el =>{
+        el.addEventListener('click', function(e){
+            let pClicked = e.target
+             pClicked.style.textDecorationLine = "line-through"
+            })
+    })
 
 
 })
