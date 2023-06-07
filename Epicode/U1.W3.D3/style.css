@@ -1,0 +1,36 @@
+nav li{
+    display: inline;
+    margin-right: 4em;
+}
+
+#conteiner{
+    text-align: center;
+}
+header{
+    margin: 3em;
+    padding-bottom: 2em;
+}
+h1{
+    margin-bottom: 3em;
+}
+label{
+    padding-right: 2em;
+    font-size: large;
+    font-weight: bold;
+}
+input{
+    margin-bottom: 4em;
+}
+button{
+    padding: 0.7em;
+    font-weight: bold;
+    border-radius: 3px 3px;
+}
+main{
+    background-color: cornflowerblue;
+    margin-right: 30%;
+   margin-left: 30%;
+   padding-top: 2em;
+   padding-bottom: 2em;
+    
+}

@@ -11,6 +11,8 @@ TaskForm.addEventListener('submit', function(e){
     const savedTaskDiv = document.getElementById("saved-task")
     savedTaskDiv.appendChild(newTaskCard)
 
+    taskText.value = ""
+
 
 
 })
