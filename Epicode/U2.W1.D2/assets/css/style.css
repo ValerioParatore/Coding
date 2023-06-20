@@ -33,6 +33,8 @@ header {
   box-shadow: 0 3px 3px #444;
   margin-bottom: 1.5em;
   padding: 2em 1.5em;
+  position: sticky;
+  top: 0;
 }
 #icons i{
   width: 2em;
@@ -109,9 +111,14 @@ main img{
 }
 main span{
   position: relative;
+  z-index: 1;
 }
 span img{
+  position: absolute;
   width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
   
 }
 @media screen and (min-width: 700px) {
