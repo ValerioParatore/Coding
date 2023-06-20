@@ -229,6 +229,10 @@ footer a {
     header{
         max-height: 14vh;
     }
+    input{
+        display: inline-block;
+        width: 70%;
+    }
 }
 
 
