@@ -4,6 +4,8 @@ body{
 article{
     background-color: #fef7e2;
     padding: 2em;
+}
+.article-content{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
