@@ -1,0 +1,33 @@
+.card{
+    background-color: #fef7e2;
+    border-radius: 6em;
+    color: #752305;
+    max-width: max-content;
+
+}
+button{
+    background-color: #ffdf7f;
+    border-radius: 6.5em ;
+    border: none;
+    padding: 1em 1.6em;
+    color: #752305;
+    font-weight: bold;
+}
+img{
+    width: 300px;
+    border-radius: 6em;
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: unset;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h3{
+    font-size: larger;
+}
