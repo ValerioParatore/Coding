@@ -4,10 +4,12 @@ body{
 article{
     background-color: #fef7e2;
     padding: 2em;
+    display: flex;
+    border-radius: 3em;
+    color: #752305;
 }
 .article-content{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    max-width: fit-content;
+    flex-direction: column;
+    margin-left: 2em;
 }
