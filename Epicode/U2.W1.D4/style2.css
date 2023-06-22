@@ -1,0 +1,57 @@
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
+@keyframes dissolve{
+    0%{
+    transform: translate(0, -30);
+    opacity: 0;
+    }
+    25%{
+        opacity: 0;
+    transform: translate(0)
+    }
+    50%{
+        opacity: 1;
+        transform: translate(0);
+    }
+    55%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateZ(0, 30);
+        opacity: 0;
+    }
+}
+span{
+    color: cadetblue;
+    position: absolute;
+    
+}
+p{
+    position: relative;
+}
+div{
+    border: 3px solid gray;
+    padding: 2em;
+    border-color: black;
+    width: 300px;
+    height: 130px;
+    margin: 200px;
+}
+#sentence1{
+
+    animation: dissolve 10s 0s infinite;
+}
+#sentence2{
+    opacity: 0;
+    animation: dissolve 10s 4s infinite;
+    
+}
+#sentence3{
+    opacity: 0;
+    animation: dissolve 10s 8s infinite;
+}
