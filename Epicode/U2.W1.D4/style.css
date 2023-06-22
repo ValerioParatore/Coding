@@ -5,7 +5,7 @@
     }
     50%{
         opacity: 0.6;
-        transform: scale(1.4);
+        transform: scale(1.2);
     }
     100%{
         opacity: 1;
@@ -18,7 +18,7 @@ body{
 }
 main{
     
-    margin-top: 12%;
+    margin-top: 8%;
 }
 
 #postits{
@@ -32,13 +32,13 @@ main{
 
 #postits div{
     height: 220px;
-    width: 250px;
+    width: 280px;
     box-shadow: 8px 8px 16px 18px #404040;
 
 }
 #postits-second-row div{
     height: 220px;
-    width: 250px;
+    width: 280px;
     box-shadow: 8px 8px 16px 18px #404040;
 
 }
