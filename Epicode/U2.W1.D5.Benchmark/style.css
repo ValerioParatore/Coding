@@ -72,9 +72,9 @@ nav{
     background-color: #ffc017;
     border-bottom: 2px solid #191919;
     display: flex;
+    justify-content: space-between;
     font-weight: 400;
     font-family: 'Roboto Serif', serif;
-    height: 450px;
     
 }
 button{
@@ -104,8 +104,9 @@ button{
 }
 /* TREND SECTION*/
 #trend{
-    margin-right: 64px;
-    margin-left: 64px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1100px;
 }
 .title-icon{
     display: flex;
@@ -187,6 +188,7 @@ button{
 .aside{
     position: sticky;
     top: 107px;
+    max-width: 500px;
 }
 .aside-el div{
     border: 1px solid rgba(242, 242, 242, 1);
@@ -199,8 +201,7 @@ button{
 .aside-el{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
+    justify-content: flex-start
 }
 .title-aside{
     margin-bottom: 20px;
