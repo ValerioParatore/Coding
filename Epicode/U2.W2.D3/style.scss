@@ -1,0 +1,11 @@
+@import "./parcial/_reset.scss";
+@import "./parcial/_colors.scss";
+@import "./parcial/_font.scss";
+@import "./parcial/_spazziature.scss";
+@import "./parcial/_mixing.scss";
+@import "./parcial/_animazioni.scss";
+@import "./parcial/_bottoni.scss";
+
+ul{
+    @include flex-config(row, space-between, start, unset);
+}

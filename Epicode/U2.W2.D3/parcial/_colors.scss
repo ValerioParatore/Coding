@@ -1,0 +1,18 @@
+$fontColor: lightblue;
+$bgNav: darken(blue, 30%);
+$bgColor: lighten(blue,30%);
+$footerColor: blue;
+$padding: 32px;
+nav{
+    background-color: $bgNav;
+}
+#hero{
+    background-color: $bgColor;
+}
+body{
+    color: $fontColor;
+}
+main,header,footer{
+    margin-left: $padding;
+    margin-right: $padding;
+}

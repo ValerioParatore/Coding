@@ -1,0 +1,6 @@
+@mixin flex-config($dir, $lungo, $corto, $gap){
+    display: flex;
+    justify-content: $dir;
+    align-items: $lungo;
+    gap: $gap;
+}
