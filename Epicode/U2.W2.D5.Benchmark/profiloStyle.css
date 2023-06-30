@@ -52,3 +52,6 @@ span{
 body,button,select{
     background-color: #141414;
 }
+h1{
+    font-size: 4em;
+}
