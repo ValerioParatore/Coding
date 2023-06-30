@@ -37,3 +37,9 @@ li a:hover{
   color: white;
   transform: scale(1.2);
 }
+a{
+  cursor: pointer;
+}
+i{
+  cursor: pointer;
+}

@@ -1,0 +1,54 @@
+#logo {
+    width: 24vh;
+  }
+  #avatarIcon{
+    width: 16vh;
+    height: 16vh;
+    margin-right: 20px;
+  }
+  img{
+    height: 100%;
+    width: 100%;
+  }
+#rettangolo{
+    height: 2.5vh;
+    width: 18vh;
+    background-color: #333333;
+}
+input[type=text] {
+    background-color: #666666;
+    color: white;
+    border: none;
+  }
+select{
+    border-radius: 0;
+    border-color: white;
+    width: 12vh;
+}
+#mainSec{
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+}
+input[type=checkbox] {
+    appearance: none;
+    background-color: #141414;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.5em;
+    height: 1.5em;
+    border: 0.15em solid #666666;
+    outline: max(2px, 0.15em) #666666;
+    outline-offset: max(2px, 0.15em);
+  
+  }
+span{
+    font-size: 0.6em;
+}
+.txt{
+    font-size: 0.8em;
+}
+body,button,select{
+    background-color: #141414;
+}
