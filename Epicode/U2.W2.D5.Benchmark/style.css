@@ -33,13 +33,16 @@ footer{
 .col:hover{
   transform: scale(1.4);
 }
+li a{
+  color: #666666;
+}
 li a:hover{
   color: white;
   transform: scale(1.2);
 }
-a{
+a,i{
   cursor: pointer;
 }
-i{
-  cursor: pointer;
+body,button,ul,li,.dropdown-menu{
+  background-color: #141414;
 }
