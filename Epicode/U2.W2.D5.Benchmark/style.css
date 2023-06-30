@@ -1,0 +1,39 @@
+#logo {
+    width: 12vh;
+  }
+#avatar {
+    width: 3.5vh;
+  }
+#iDown{
+    font-size: 12px;
+}
+.col{
+    width: 16vh;
+    height: 12vh;
+    border-radius: 4px;
+    margin: 3px;
+}
+img{
+  height: 100%;
+  width: 100%;
+}
+#footerI i{
+  font-size: 2.6vh;
+  margin-right: 1.4vh;
+}
+
+.fs-6{
+  font-size: 5px;
+}
+footer{
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.col:hover{
+  transform: scale(1.4);
+}
+li a:hover{
+  color: white;
+  transform: scale(1.2);
+}
