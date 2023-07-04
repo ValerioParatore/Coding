@@ -19,7 +19,7 @@ const generateList = function () {
     const listReference = document.querySelector('#appointments-list ul')
     listReference.innerHTML = ''
     // proseguiamo nel nostro codice solamente se ci sono eventi da mostrare!
-    const appointments = JSON.parse(appointmentsFromLocalStorage)
+    let appointments = JSON.parse(appointmentsFromLocalStorage)
     // appointments è un array vero e proprio con gli oggetti evento dentro
     //   genero i miei list-item a partire dall'array appointments
     appointments.forEach((app) => {
@@ -35,8 +35,15 @@ const generateList = function () {
       let deleteButton = document.createElement('button')
       deleteButton.classList.add('btn', 'btn-danger')
       deleteButton.innerHTML = '<i class="bi bi-trash3-fill"></i>'
-      deleteButton.addEventListener('click', function (e) {
-        
+      deleteButton.addEventListener('click', function () {
+        const deleteBtns = document.getElementsByClassName('btn-danger')
+        let arrayBtns = Array.from(deleteBtns)
+        arrayBtns.forEach((e, i)=>{
+          if(this === e){
+          appointments = appointments.slice(0, i).concat(appointments.slice(i + 1))
+          localStorage.setItem('appointments', JSON.stringify(appointments))}
+        })
+        generateList()
         // EXTRA: inserisci qui il codice per eliminare
         // un elemento dalla lista (e dal localStorage!)
         console.log('clicked!')
