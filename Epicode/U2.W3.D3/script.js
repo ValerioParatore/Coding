@@ -24,13 +24,16 @@ const getBooks = function(){
             let newBookCard = document.createElement('div')
             newBookCard.classList.add('col', 'col-3')
             newBookCard.innerHTML =` 
-             <div class="card">
-              <img src="${book.img}" class="card-img-top" alt="...">
-               <div class="card-body">
+             <div class="card" >
+              <img src="${book.img}" class="card-img-top" alt="..." style="height: 38vh">
+               <div class="card-body" style="height: 16vh">
                 <h5 class="card-title">${book.title}</h5>
                 <p class="card-text d-inline">${book.price} Euro</p>
                 <button onclick="deleteMe(this)" class="btn btn-danger d-inline ms-3">
                 <i class="bi bi-trash3-fill"></i>
+                </button>
+                <button onclick="addMe(this)" class="btn btn-success d-inline ms-3">
+                <i class="bi bi-cart3"></i>
                 </button>
                </div>
              </div>         
@@ -47,4 +50,9 @@ getBooks()
 
 const deleteMe = function(clickedButton){
     clickedButton.parentElement.parentElement.remove()
+}
+
+const addMe = function(el){
+    let cardEl = el.parentElement
+    cardEl.secondChild.value
 }
