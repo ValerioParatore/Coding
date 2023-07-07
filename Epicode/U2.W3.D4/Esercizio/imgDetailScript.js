@@ -1,4 +1,4 @@
-const url = 'https://api.pexels.com/v1/search?query=dragons/'
+const url = 'https://api.pexels.com/v1/photos/'
 const currentAddress = new URLSearchParams(location.search)
 const elId = currentAddress.get('id')
 console.log(elId)

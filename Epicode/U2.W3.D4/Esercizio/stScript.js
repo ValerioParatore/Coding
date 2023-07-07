@@ -121,5 +121,5 @@ btnImg2.addEventListener('click', function(e){
 })
 })
 const deleteMe = function(clickedButton){
-    clickedButton.parentElement.parentElement.parentElement.parentElement.remove()
+    clickedButton.parentElement.parentElement.parentElement.parentElement.parentElement.remove()
 }

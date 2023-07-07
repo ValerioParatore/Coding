@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Back Office</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Epi-Shop</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="homePage.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="backOffice.html"
+                  >Back Office</a
+                >
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="mx-5">
+      <h1>Epi-Shop: Aggiungi il tuo prodotto in vendita</h1>
+      <section>
+        <form id="add-pro">
+          <div class="mb-3">
+            <label for="nameProduct" class="form-label"
+              >Nome del Prodotto</label
+            >
+            <input type="text" class="form-control" id="name-pro" />
+          </div>
+          <div class="mb-3">
+            <label for="descriptionProduct" class="form-label"
+              >Descrizione del prodotto</label
+            >
+            <input type="text" class="form-control" id="des-pro" />
+          </div>
+          <div class="mb-3">
+            <label for="brandProduct" class="form-label"
+              >Marca del prodotto</label
+            >
+            <input type="text" class="form-control" id="brand-pro" />
+          </div>
+          <div class="mb-3">
+            <label for="imgProduct" class="form-label"
+              >Immagine del prodotto</label
+            >
+            <input type="url" class="form-control" id="img-pro" />
+          </div>
+          <div class="mb-3">
+            <label for="priceProduct" class="form-label"
+              >Prezzo del prodotto</label
+            >
+            <input
+              type="number"
+              step="0.01"
+              class="form-control"
+              id="price-pro"
+            />
+          </div>
+          <div id="btns-div">
+            <button type="submit" class="btn btn-primary">
+              Aggiungi Prodotto
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="backOfficeScript.js"></script>
+  </body>
+</html>
