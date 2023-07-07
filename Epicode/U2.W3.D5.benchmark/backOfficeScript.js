@@ -15,19 +15,56 @@ console.log(idPro);
 if (idPro) {
     document.querySelector('.btn-primary').innerText = 'Modifica Prodotto'
     document.querySelector('h1').innerText = 'Epi-Shop - Modifica Prodotto'
-    const btnReset = document.createElement('button')
-    btnReset.classList.add('btn' , 'btn-danger')
-    btnReset.innerText = 'Reset'
-    btnReset.addEventListener('click', function(e){
-        e.preventDefault()
-        namePro.value = ""
-        descPro.value = ""
-        brandPro.value = ""
-        imgPro.value = ""
-        pricePro.value = ""
-    })
-    divBtns.appendChild(btnReset)
-
+    const btnReset = document.getElementById('btns-div-res')
+    btnReset.innerHTML = `
+    <button
+    
+    type="button"
+    class="btn btn-danger"
+    data-bs-toggle="modal"
+    data-bs-target="#exampleModalRes"
+  >
+    Reset
+  </button>
+  <div
+    class="modal fade"
+    id="exampleModalRes"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            Reset dei campi
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+        Confermi il reset dei campi?
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Indietro
+          </button>
+          <button onclick="resetFun()" type="button" class="btn btn-success">
+            Confermo
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+    `
     fetch(URL + idPro,{
         headers: {
         "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGE3ZDhhNTEyYjUwYzAwMTQ5ZTUwMWQiLCJpYXQiOjE2ODg3MjE1NzMsImV4cCI6MTY4OTkzMTE3M30.Q5BMa2GP73ZfhI46gtaYT-FtwgTWrPQMPALiVuu0G70"
@@ -37,7 +74,13 @@ if (idPro) {
         if (res.ok) {
           return res.json()
         } else {
-          throw new Error("Errore nel recupero dei dettagli dell'Prodotto")
+            if(res.status === 404){
+                throw new Error('Not found')
+            }else if(res.status === 500){
+                throw new Error('Internal Server Error')
+            }else{
+                throw new Error('Errore della chiamata API')
+            }
         }
       })
       .then((detail) => {
@@ -96,10 +139,25 @@ eventForm.addEventListener('submit', function(e){
           pricePro.value = ""
           location.assign('homePage.html')
         } else {
-          throw new Error("Errore nel salvataggio del Prodotto")
+            if(res.status === 404){
+                throw new Error('Not found')
+            }else if(res.status === 500){
+                throw new Error('Internal Server Error')
+            }else{
+                throw new Error('Errore della chiamata API')
+            }
         }
       })
       .catch((err) => {
         console.log(err)
       })
   })
+
+
+const resetFun= function(e){
+    namePro.value = ""
+    descPro.value = ""
+    brandPro.value = ""
+    imgPro.value = ""
+    pricePro.value = ""
+}

@@ -13,7 +13,13 @@ fetch(URL + idPro,{
     if (res.ok) {
       return res.json()
     } else {
-      throw new Error("Errore nel recupero dei dettagli dell'evento")
+        if(res.status === 404){
+            throw new Error('Not found')
+        }else if(res.status === 500){
+            throw new Error('Internal Server Error')
+        }else{
+            throw new Error('Errore della chiamata API')
+        }
     }
   })
   .then((detail) => {
@@ -42,7 +48,24 @@ fetch(URL + idPro,{
                 </p>
                 <div>
                 <a href="./backOffice.html?id=${detail._id}" class="btn btn-warning">MODIFICA PRODOTTO</a>
-                <button type="button" class="btn btn-danger">ELIMINA PRODOTTO</button>
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">ELIMINA PRODOTTO</button>
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Elimina Prodotto</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Sicuro di voler eliminare il prodotto dallo Shop ? Una volta cliccato su conferma non si potrà tornare indietro
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Indietro</button>
+        <button type="button" class="btn btn-primary">Conferma</button>
+      </div>
+    </div>
+  </div>
+</div>
                 </div>
               </div>
             </div>
@@ -50,7 +73,7 @@ fetch(URL + idPro,{
     const eventsRow = document.getElementById('events-row')
     eventsRow.appendChild(newCol)
 
-    let deleteButton = document.querySelector('.btn-danger')
+    let deleteButton = document.querySelector('.btn-primary')
     deleteButton.addEventListener('click', function () {
       fetch(URL + idPro, {
         method: 'DELETE',
@@ -64,7 +87,13 @@ fetch(URL + idPro,{
             alert('PRODOTTO ELIMINATO!')
             location.assign('homePage.html')
           } else {
-            throw new Error("Problema nell'eliminazione dell'evento")
+            if(res.status === 404){
+                throw new Error('Not found')
+            }else if(res.status === 500){
+                throw new Error('Internal Server Error')
+            }else{
+                throw new Error('Errore della chiamata API')
+            }
           }
         })
         .catch((err) => {

@@ -11,10 +11,18 @@ const getPro = function(){
         if(res.ok){
            return res.json()
         }else{
-            throw new Error('Errore nella chiamata API')
+            if(res.status === 404){
+                throw new Error('Not found')
+            }else if(res.status === 500){
+                throw new Error('Internal Server Error')
+            }else{
+                throw new Error('Errore della chiamata API')
+            }
         }
     })
     .then((events)=>{
+        const spinnerContainer = document.getElementById('spinner-container')
+        spinnerContainer.classList.add('d-none')
         console.log(events);
         let divCards = document.getElementById('div-cards')
         events.forEach(el => {

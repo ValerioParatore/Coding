@@ -97,10 +97,58 @@
               id="price-pro"
             />
           </div>
-          <div id="btns-div">
-            <button type="submit" class="btn btn-primary">
-              Aggiungi Prodotto
-            </button>
+          <div class="d-flex">
+            <div id="btns-div" class="me-4">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Aggiungi Prodotto
+              </button>
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        Aggiungi Prodotto
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      Confermi di voler aggiungere il prodotto alla lista dello
+                      Shop? Potrai comunque modificiare il prodotto o eliminarlo
+                      anche in seguito.
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Indietro
+                      </button>
+                      <button type="submit" class="btn btn-success">
+                        Confermo
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="btns-div-res"></div>
           </div>
         </form>
       </section>
