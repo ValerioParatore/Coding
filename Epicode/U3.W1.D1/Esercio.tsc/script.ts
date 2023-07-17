@@ -8,7 +8,9 @@ const randomNumberGame = function(){
     let randomNumberGenerator:number = Math.floor(Math.random() * 10);
     console.log('Il giocatore 1 sceglie il numero: '+player1 + " Il giocatore 2 sceglie il numero:  " + player2 + " Il numero estratto è: " + randomNumberGenerator);
     spanResult1.innerText = 'Il giocatore 1 sceglie il numero: '+player1 + " Il giocatore 2 sceglie il numero:  " + player2 + " Il numero estratto è: " + randomNumberGenerator;
-    if(randomNumberGenerator === player1){
+    if(player1 === player2 && player1 === randomNumberGenerator){
+        spanResult.innerText = 'Entrambi hanno indovinato il numero estratto';
+    }else if(randomNumberGenerator === player1){
         console.log('Player 1 wins!');
         spanResult.innerText = 'Player 1 wins!';
     }else if(randomNumberGenerator === player2){
