@@ -1,13 +1,13 @@
 const spanResult = <HTMLSpanElement>document.getElementById('risultato')
-const spanResult1 = <HTMLSpanElement>document.getElementById('risultato1')
+const spanNumeroEstratto = <HTMLSpanElement>document.getElementById('numero-estratto')
 
 
 const randomNumberGame = function(){
-    let player1 : number = parseFloat((<HTMLInputElement>document.getElementById("player1")).value);
-    let player2 : number = parseFloat((<HTMLInputElement>document.getElementById("player2")).value);
+    let player1 : number = parseInt((<HTMLInputElement>document.getElementById("player1")).value);
+    let player2 : number = parseInt((<HTMLInputElement>document.getElementById("player2")).value);
     let randomNumberGenerator:number = Math.floor(Math.random() * 10);
     console.log('Il giocatore 1 sceglie il numero: '+player1 + " Il giocatore 2 sceglie il numero:  " + player2 + " Il numero estratto è: " + randomNumberGenerator);
-    spanResult1.innerText = 'Il giocatore 1 sceglie il numero: '+player1 + " Il giocatore 2 sceglie il numero:  " + player2 + " Il numero estratto è: " + randomNumberGenerator;
+    spanNumeroEstratto.innerText =  "Il numero estratto è: " + randomNumberGenerator;
     if(player1 === player2 && player1 === randomNumberGenerator){
         spanResult.innerText = 'Entrambi hanno indovinato il numero estratto';
     }else if(randomNumberGenerator === player1){
@@ -34,7 +34,10 @@ const randomNumberGame = function(){
 //Tentativi di manipolazione del dominio
 const submitButton = document.querySelector('button') as HTMLButtonElement;
 submitButton.addEventListener('click', (e) =>{
-
     e.preventDefault();
     randomNumberGame();
+    let player1 = <HTMLInputElement>document.getElementById("player1");
+    let player2 = <HTMLInputElement>document.getElementById("player2");
+    player1.value = '';
+    player2.value =  '';
 })

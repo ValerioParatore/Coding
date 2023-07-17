@@ -1,11 +1,11 @@
 var spanResult = document.getElementById('risultato');
-var spanResult1 = document.getElementById('risultato1');
+var spanNumeroEstratto = document.getElementById('numero-estratto');
 var randomNumberGame = function () {
-    var player1 = parseFloat(document.getElementById("player1").value);
-    var player2 = parseFloat(document.getElementById("player2").value);
+    var player1 = parseInt(document.getElementById("player1").value);
+    var player2 = parseInt(document.getElementById("player2").value);
     var randomNumberGenerator = Math.floor(Math.random() * 10);
     console.log('Il giocatore 1 sceglie il numero: ' + player1 + " Il giocatore 2 sceglie il numero:  " + player2 + " Il numero estratto è: " + randomNumberGenerator);
-    spanResult1.innerText = 'Il giocatore 1 sceglie il numero: ' + player1 + " Il giocatore 2 sceglie il numero:  " + player2 + " Il numero estratto è: " + randomNumberGenerator;
+    spanNumeroEstratto.innerText = "Il numero estratto è: " + randomNumberGenerator;
     if (player1 === player2 && player1 === randomNumberGenerator) {
         spanResult.innerText = 'Entrambi hanno indovinato il numero estratto';
     }
@@ -37,4 +37,8 @@ var submitButton = document.querySelector('button');
 submitButton.addEventListener('click', function (e) {
     e.preventDefault();
     randomNumberGame();
+    var player1 = document.getElementById("player1");
+    var player2 = document.getElementById("player2");
+    player1.value = '';
+    player2.value = '';
 });
