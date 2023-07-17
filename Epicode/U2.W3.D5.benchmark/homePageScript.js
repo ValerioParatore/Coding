@@ -40,7 +40,7 @@ const getPro = function(){
                <p class="card-text fw-bold">
                ${el.price} euro
                </p>
-               <a href="./detail.html?id=${el._id}" class="btn btn-primary">Scopri di più</a>
+               <a href="./detail.html?id=${el._id}" class="btn btn-secondary">Scopri di più</a>
               </div>
             </div>
             `

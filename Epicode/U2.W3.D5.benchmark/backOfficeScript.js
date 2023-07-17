@@ -57,7 +57,7 @@ if (idPro) {
           >
             Indietro
           </button>
-          <button onclick="resetFun()" type="button" class="btn btn-success">
+          <button data-bs-dismiss="modal" onclick="resetFun()" type="button" class="btn btn-success">
             Confermo
           </button>
         </div>

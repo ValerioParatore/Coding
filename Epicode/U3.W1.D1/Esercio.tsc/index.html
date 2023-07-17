@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esercizio tsc</title>
+    <style>
+      main {
+        text-align: center;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      input {
+        margin: 0.4em;
+      }
+      #risultato {
+        font-size: 2em;
+        color: blueviolet;
+      }
+      button {
+        margin: 1em;
+        padding: 1em;
+        border-radius: 10px;
+        background-color: green;
+        color: aliceblue;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Indovina il numero!</h1>
+      <form action="submit">
+        <span>Giocatore 1</span>
+        <input
+          id="player1"
+          type="number"
+          name="numero"
+          placeholder="Inserisci un numero"
+        />
+        <span>Giocatore 2</span>
+        <input
+          id="player2"
+          type="number"
+          name="numero"
+          placeholder="Inserisci un numero"
+        />
+        <button>Chi si è avvicinato di più?</button>
+        <span id="risultato1"></span>
+        <span id="risultato"></span>
+      </form>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
