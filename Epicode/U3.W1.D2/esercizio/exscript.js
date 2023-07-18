@@ -15,6 +15,10 @@ class SonAccount {
     Withdraw2(amount) {
         this.balanceInit -= amount;
     }
+    addInterest(account) {
+        this.balanceInit = this.balanceInit - this.balanceInit * 0.10;
+        return this.balanceInit;
+    }
 }
 class MotherAccount {
     constructor() {
@@ -33,9 +37,8 @@ class MotherAccount {
         this.balanceInit -= amount;
     }
     addInterest(account) {
-        this.balanceInit *= 0.10;
-        console.log(this.balanceInit);
-        console.log(account.balanceInit);
+        this.balanceInit = this.balanceInit - this.balanceInit * 0.10;
+        return this.balanceInit;
     }
 }
 let newSonAccount = new SonAccount();
@@ -66,8 +69,8 @@ btnSonWith.addEventListener("click", () => {
     newSonAccount.Withdraw(withSonInput);
 });
 btnMomShow.addEventListener("click", () => {
-    spanMom.innerHTML = newMotherAccount.balanceInit.toString();
+    spanMom.innerHTML = newMotherAccount.addInterest(newMotherAccount).toString();
 });
 btnSonShow.addEventListener("click", () => {
-    spanSon.innerHTML = newSonAccount.balanceInit.toString();
+    spanSon.innerHTML = newSonAccount.addInterest(newSonAccount).toString();
 });
