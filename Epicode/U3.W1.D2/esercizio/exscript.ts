@@ -2,6 +2,8 @@ class SonAccount{
     public balanceInit:number = 0
     Deposit(amount:number){
        this.balanceInit += amount
+       console.log(this.balanceInit);
+       
     }
     Deposit2(amount:number){
         this.balanceInit += amount
@@ -36,7 +38,35 @@ class MotherAccount{
 }
 let newSonAccount = new SonAccount()
 let newMotherAccount = new MotherAccount()
-newMotherAccount.Deposit(100)
-console.log(newMotherAccount.balanceInit);
-newMotherAccount.Deposit2(200)
-newMotherAccount.addInterest(newSonAccount)
+
+
+
+
+const btnMomDep = <HTMLButtonElement>document.getElementById("btn-mom-dep");
+const btnMomWith = <HTMLButtonElement>document.getElementById("btn-mom-with");
+const btnSonDep = <HTMLButtonElement>document.getElementById("btn-son-dep");
+const btnSonWith = <HTMLButtonElement>document.getElementById("btn-son-with");
+const btnMomShow = <HTMLButtonElement>document.getElementById("btn-mom-show");
+const btnSonShow = <HTMLButtonElement>document.getElementById("btn-son-show");
+const spanMom = <HTMLSpanElement>document.getElementById("span-mom");
+const spanSon = <HTMLSpanElement>document.getElementById("span-son");
+
+btnMomDep.addEventListener("click", () => {
+    const depMomInput:number = parseInt((<HTMLInputElement>document.getElementById("mom-dep")).value);
+    newMotherAccount.Deposit(depMomInput);
+})
+
+btnMomWith.addEventListener("click", () => {
+    const withMomInput:number = parseInt((<HTMLInputElement>document.getElementById("mom-with")).value);
+    newMotherAccount.Withdraw(withMomInput);
+})
+
+btnSonDep.addEventListener("click", () => {
+    const depSonInput:number = parseInt((<HTMLInputElement>document.getElementById("son-dep")).value);
+    newSonAccount.Deposit(depSonInput);
+})
+
+btnSonWith.addEventListener("click", () => {
+    const withSonInput:number = parseInt((<HTMLInputElement>document.getElementById("son-with")).value);
+    newSonAccount.Withdraw(withSonInput);
+})
