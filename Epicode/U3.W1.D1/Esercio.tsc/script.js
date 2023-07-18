@@ -1,9 +1,10 @@
-var spanResult = document.getElementById('risultato');
-var spanNumeroEstratto = document.getElementById('numero-estratto');
-var randomNumberGame = function () {
-    var player1 = parseInt(document.getElementById("player1").value);
-    var player2 = parseInt(document.getElementById("player2").value);
-    var randomNumberGenerator = Math.floor(Math.random() * 10);
+"use strict";
+const spanResult = document.getElementById('risultato');
+const spanNumeroEstratto = document.getElementById('numero-estratto');
+const randomNumberGame = function () {
+    let player1 = parseInt(document.getElementById("player1").value);
+    let player2 = parseInt(document.getElementById("player2").value);
+    let randomNumberGenerator = Math.floor(Math.random() * 10);
     console.log('Il giocatore 1 sceglie il numero: ' + player1 + " Il giocatore 2 sceglie il numero:  " + player2 + " Il numero estratto è: " + randomNumberGenerator);
     spanNumeroEstratto.innerText = "Il numero estratto è: " + randomNumberGenerator;
     if (player1 === player2 && player1 === randomNumberGenerator) {
@@ -33,12 +34,12 @@ var randomNumberGame = function () {
     }
 };
 //Tentativi di manipolazione del dominio
-var submitButton = document.querySelector('button');
-submitButton.addEventListener('click', function (e) {
+const submitButton = document.querySelector('button');
+submitButton.addEventListener('click', (e) => {
     e.preventDefault();
     randomNumberGame();
-    var player1 = document.getElementById("player1");
-    var player2 = document.getElementById("player2");
+    let player1 = document.getElementById("player1");
+    let player2 = document.getElementById("player2");
     player1.value = '';
     player2.value = '';
 });
