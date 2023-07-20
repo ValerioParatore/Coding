@@ -14,10 +14,10 @@ class Abito {
         this.saldo = saldo;
     }
     getSaldoCapo() {
-        return this.saldo * 0.01;
+        return (this.saldo * this.prezzoivainclusa) / 100;
     }
     getAcquistaCapo() {
-        return this.prezzoivaesclusa - this.getSaldoCapo();
+        return this.prezzoivainclusa - this.getSaldoCapo();
     }
 }
 fetch("starter/Abbigliamento.json")
