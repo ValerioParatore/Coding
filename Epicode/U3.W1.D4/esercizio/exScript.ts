@@ -24,10 +24,10 @@ class Abito {
 
 
 fetch("starter/Abbigliamento.json")
-.then((response:any) => response.json())
-.then((data:any) => {
+.then((response:Response) => response.json())
+.then((data:Abito[]) => {
     console.log(data);
-    data.forEach((element:any) => {
+    data.forEach((element:Abito) => {
         let newAbito = new Abito(
             element.id,
             element.codprod,
