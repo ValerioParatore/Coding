@@ -22,13 +22,24 @@ class Smartphone {
             this.carica -= (min * this.costoMinuto);
             this.numeroChiamate++;
             let today = new Date();
-            this.registroChiamate.push({ "ID": Math.floor(Math.random() * 10000000), "minuti": min, "Data": today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear() });
+            this.registroChiamate.push({ ID: Math.floor(Math.random() * 10000000), minuti: min, data: today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear() + " ore " + today.getHours() + "/" + today.getMinutes() });
             console.log("E' stata appena effettuata una chiamata di durata : " + min + " minuti");
         }
     }
     azzeraChiamate() {
         this.numeroChiamate = 0;
         console.log("chiamate azzerate");
+    }
+    mostraRegistroChiamate() {
+        console.log(this.registroChiamate);
+    }
+    filtraRegistroChiamate(data) {
+        this.registroChiamate.forEach(el => {
+            if (el.data == data) {
+                console.log(el);
+                return el;
+            }
+        });
     }
 }
 let utente1 = new Smartphone(20, 0);
@@ -76,4 +87,4 @@ console.log("Hai effetuato " + utente3.numeroChiamate + " chiamate");
 utente3.azzeraChiamate();
 console.log("Hai effetuato " + utente3.numeroChiamate + " chiamate");
 console.log(utente3.numer404());
-console.log(utente3.registroChiamate);
+utente1.filtraRegistroChiamate("21/7/2023 ore 13/25");
