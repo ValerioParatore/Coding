@@ -1,0 +1,18 @@
+h1 {
+    font-family: 'Open Sans', sans-serif;
+}
+h1:hover{
+    font-size: 2.5em;
+    color: chartreuse;
+}
+#main-cont{
+    padding: 3em;
+    text-align: center;
+    height: 100vh;
+    background-image: url(https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701901088.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h2{
+    color: greenyellow;
+}

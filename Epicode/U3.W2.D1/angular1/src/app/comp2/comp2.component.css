@@ -1,0 +1,10 @@
+h3{
+    color: coral;
+}
+h3:hover{
+    font-size: 2em;
+    color: aquamarine;
+}
+p{
+    color: sandybrown;
+}
