@@ -1,0 +1,20 @@
+<div
+  [ngClass]="{
+    'bg-danger text-white': singlePost.type === 'news',
+    'bg-warning text-white': singlePost.type === 'politics',
+    'bg-secondary text-black': singlePost.type === 'educations',
+  }"
+  class="card col"
+  style="width: 18rem"
+  *ngFor="let singlePost of pippo"
+>
+  <div class="card-body">
+    <h5 class="card-title">{{ singlePost.title }}</h5>
+    <p class="card-text">
+      {{ singlePost.content }}
+    </p>
+    <button (click)="changeAct(singlePost.id, singlePost.active)">
+      Attiva
+    </button>
+  </div>
+</div>

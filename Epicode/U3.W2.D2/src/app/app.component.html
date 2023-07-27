@@ -1,0 +1,25 @@
+<ul>
+  <li *ngFor="let singlePost of pippo">
+    <!-- l'li e tutto il suo contenuto verranno ripetuti per ogni elemento dell'array pippo
+         crea una variabile singlePost che contiene l'elemento singolo dell'array pippo (=== pippo[i] o al parametro del cb di forEach)
+    -->
+    <!-- ESEMPIO DI ngIF:  <div *ngIf="singlePost.id % 2 === 0"> -->
+    <!--
+      ngStyle => nome della proprieta' CSS => valore o condizione (con ternario) che lo assegna
+      in questo caso se id e' divisibile per 2 applica bordo rosso, else bordo blue
+     -->
+    <div [ngStyle]="{
+
+        'border' : singlePost.id % 2 === 0 ? '2px solid red': '2px solid blue'
+      }">
+      <h1>
+        <!-- INTERPOLAZIONE: {{valore da interpolare}}, simile al ${} che usavamo in passato -->
+        <!-- Se non creo l'interfaccia che mi da le proprieta' di singlePost non posso accedere a .title -->
+        {{singlePost.title}} || {{singlePost.id}}
+      </h1>
+      <p>
+        {{singlePost.body}}
+      </p>
+    </div>
+  </li>
+</ul>

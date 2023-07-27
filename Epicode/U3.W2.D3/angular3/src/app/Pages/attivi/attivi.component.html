@@ -1,0 +1,21 @@
+<div
+  class="card col text-light"
+  [ngClass]="{
+    'bg-warning': singlePost.type === 'politics',
+  'bg-primary': singlePost.type === 'news',
+
+  'bg-secondary text-black': singlePost.type === 'educations',
+}"
+  style="width: 18rem"
+  *ngFor="let singlePost of pippo"
+>
+  <div class="card-body">
+    <h5 class="card-title">{{ singlePost.title }}</h5>
+    <p class="card-text">
+      {{ singlePost.content }}
+    </p>
+    <button (click)="changeAct(singlePost.id, singlePost.active)">
+      Disattiva
+    </button>
+  </div>
+</div>

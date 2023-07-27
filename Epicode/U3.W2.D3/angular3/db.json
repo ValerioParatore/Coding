@@ -1,0 +1,55 @@
+{
+  "posts": [
+    {
+      "active": true,
+      "id": 0
+    },
+    {
+      "id": 1,
+      "title": "Horus",
+      "content": "lorem ipsum dolor sit amet, consectetur adip",
+      "active": true,
+      "type": "politics"
+    },
+    {
+      "active": true,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "title": "Magnus",
+      "content": "lorem ipsum dolor sit amet, consectetur adip",
+      "active": true,
+      "type": "news"
+    },
+    {
+      "active": false,
+      "id": 4
+    },
+    {
+      "id": 5,
+      "title": "Corax",
+      "content": "lorem ipsum dolor sit amet, consectetur adip",
+      "active": true,
+      "type": "educations"
+    },
+    {
+      "id": 6,
+      "title": "R. Guilliman",
+      "content": "lorem ipsum dolor sit amet, consectetur adip",
+      "active": true,
+      "type": "news"
+    },
+    {
+      "id": 7,
+      "title": "Lionel Jhonson",
+      "content": "lorem ipsum dolor sit amet, consectetur adip",
+      "active": false,
+      "type": "politics"
+    },
+    {
+      "active": false,
+      "id": 8
+    }
+  ]
+}
