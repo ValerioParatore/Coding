@@ -1,0 +1,15 @@
+<div>
+  <h2>ToDo List</h2>
+  <ul>
+    <li *ngFor="let todo of list">
+      {{ todo.title }}
+      <input type="checkbox" (click)="done(todo.id, todo.completed)" />
+    </li>
+  </ul>
+</div>
+<div>
+  <input type="text" [(ngModel)]="newTodo.title" /><button (click)="add()">
+    Aggiungi
+  </button>
+</div>
+<app-spinner></app-spinner>

@@ -11,6 +11,7 @@ import { AttiviComponent } from './Pages/attivi/attivi.component';
 import { NonAttiviComponent } from './Pages/non-attivi/non-attivi.component';
 import { NavComponent } from './component/nav/nav.component';
 import { Page404Component } from './Pages/page404/page404.component';
+import { AuthorPipe } from './author.pipe';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { Page404Component } from './Pages/page404/page404.component';
     CardComponent,
     NavComponent,
     Page404Component,
+    AuthorPipe,
 
   ],
   imports: [

@@ -4,4 +4,5 @@ export interface Post {
   content:string;
   active:boolean;
   type: string;
+  author:string;
 }

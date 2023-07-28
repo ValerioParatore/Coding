@@ -1,0 +1,10 @@
+<div>
+  <h2>Completed Task</h2>
+  <ul>
+    <li *ngFor="let complet of completedList">
+      {{ complet.title }}
+      <button (click)="cancella(complet.id)">Elimina</button>
+    </li>
+  </ul>
+</div>
+<app-spinner></app-spinner>

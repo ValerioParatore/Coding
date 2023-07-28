@@ -1,11 +1,10 @@
 <div
-  class="card col text-light"
   [ngClass]="{
-    'bg-warning': singlePost.type === 'politics',
-  'bg-primary': singlePost.type === 'news',
-
+  'bg-danger text-white': singlePost.type === 'news',
+  'bg-warning text-white': singlePost.type === 'politics',
   'bg-secondary text-black': singlePost.type === 'educations',
 }"
+  class="card col"
   style="width: 18rem"
   *ngFor="let singlePost of pippo"
 >
@@ -13,6 +12,9 @@
     <h5 class="card-title">{{ singlePost.title }}</h5>
     <p class="card-text">
       {{ singlePost.content }}
+    </p>
+    <p class="card-text">
+      {{ singlePost.author | author }}
     </p>
     <button (click)="changeAct(singlePost.id, singlePost.active)">
       Disattiva

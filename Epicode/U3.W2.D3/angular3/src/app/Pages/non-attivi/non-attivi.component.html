@@ -13,6 +13,9 @@
     <p class="card-text">
       {{ singlePost.content }}
     </p>
+    <p class="card-text">
+      {{ singlePost.author | author }}
+    </p>
     <button (click)="changeAct(singlePost.id, singlePost.active)">
       Attiva
     </button>

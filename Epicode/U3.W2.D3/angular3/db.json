@@ -1,55 +1,76 @@
 {
   "posts": [
     {
+      "id": 0,
+      "title": "Dorn",
+      "content": "lorem ipsum dolor sit amet, consectetur adip",
       "active": true,
-      "id": 0
+      "type": "news",
+      "author": "Santino"
     },
     {
       "id": 1,
       "title": "Horus",
       "content": "lorem ipsum dolor sit amet, consectetur adip",
       "active": true,
-      "type": "politics"
+      "type": "politics",
+      "author": "Cessica"
     },
     {
-      "active": true,
-      "id": 2
+      "id": 2,
+      "title": "Fulrgrim",
+      "content": "lorem ipsum dolor sit amet, consectetur adip",
+      "active": false,
+      "type": "educations",
+      "author": "Mikko"
     },
     {
       "id": 3,
       "title": "Magnus",
       "content": "lorem ipsum dolor sit amet, consectetur adip",
-      "active": true,
-      "type": "news"
+      "active": false,
+      "type": "news",
+      "author": "Iaffio"
     },
     {
+      "id": 4,
+      "title": "Lionel Jhonson",
+      "content": "lorem ipsum dolor sit amet, consectetur adip",
       "active": false,
-      "id": 4
+      "type": "politics",
+      "author": "Melo Santagati"
     },
     {
       "id": 5,
       "title": "Corax",
       "content": "lorem ipsum dolor sit amet, consectetur adip",
       "active": true,
-      "type": "educations"
+      "type": "educations",
+      "author": "Ignazio"
     },
     {
       "id": 6,
       "title": "R. Guilliman",
       "content": "lorem ipsum dolor sit amet, consectetur adip",
       "active": true,
-      "type": "news"
+      "type": "news",
+      "author": "Turi"
     },
     {
       "id": 7,
-      "title": "Lionel Jhonson",
+      "title": "Mortarion",
       "content": "lorem ipsum dolor sit amet, consectetur adip",
-      "active": false,
-      "type": "politics"
+      "active": true,
+      "type": "politics",
+      "author": "Pippo u pazzu"
     },
     {
+      "id": 8,
+      "title": "Angron",
+      "content": "lorem ipsum dolor sit amet, consectetur adip",
       "active": false,
-      "id": 8
+      "type": "educations",
+      "author": "Giuvanni"
     }
   ]
 }
