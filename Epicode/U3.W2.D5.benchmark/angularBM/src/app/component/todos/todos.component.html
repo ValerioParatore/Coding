@@ -1,3 +1,6 @@
+<div [ngClass]="{ 'display-none': list.length > 0 }">
+  <p>Nessuna task inserita...</p>
+</div>
 <div>
   <h2>ToDo List</h2>
   <ul>
@@ -8,8 +11,10 @@
   </ul>
 </div>
 <div>
-  <input type="text" [(ngModel)]="newTodo.title" /><button (click)="add()">
-    Aggiungi
-  </button>
+  <input
+    type="text"
+    [(ngModel)]="newTodo.title"
+    placeholder="inserisci una task..."
+  /><button (click)="add()">Aggiungi</button>
 </div>
 <app-spinner></app-spinner>

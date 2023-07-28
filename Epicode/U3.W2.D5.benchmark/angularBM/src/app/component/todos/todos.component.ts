@@ -11,6 +11,7 @@ import { TodoService } from 'src/app/todo.service';
 export class TodosComponent {
   newTodo: Todo = new Todo(Math.floor(Math.random()* 10000000001), '', false);
   list: Todo[] = [];
+
   constructor(private todoService: TodoService , private router: Router) {
     this.todoService.getUncompleted().then(_ => {
       this.list = this.todoService.todosList
@@ -18,9 +19,8 @@ export class TodosComponent {
   }
   add(){
     this.todoService.addTodo(this.newTodo);
-    setTimeout(()=>{
-      this.router.navigate(['app-todos'])
-    },2000)
+      this.todoService.getUncompleted().then(_ => {
+        this.list = this.todoService.todosList})
   }
   done(el:number, current:boolean){
     this.todoService.changeList(el,current)}
