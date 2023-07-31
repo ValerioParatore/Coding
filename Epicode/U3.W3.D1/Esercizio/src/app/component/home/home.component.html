@@ -1,0 +1,10 @@
+<div class="card" style="width: 18rem" *ngFor="let singleProduct of products">
+  <img src="{{ singleProduct.images[0] }}" class="card-img-top" alt="..." />
+  <div class="card-body">
+    <h5 class="card-title">{{ singleProduct.title }}</h5>
+    <p class="card-text">{{ singleProduct.description }}</p>
+    <button class="btn btn-primary" (click)="addToPref(singleProduct.id)">
+      Aggiungi ai preferiti
+    </button>
+  </div>
+</div>
