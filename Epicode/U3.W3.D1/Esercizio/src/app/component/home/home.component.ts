@@ -16,6 +16,7 @@ export class HomeComponent {
     this.datiSvc.getAll().subscribe(data => {
       this.products = data.products;
     });
+
   }
   addToPref(id:number){
     this.datiSvc.getById(id).subscribe(data => {

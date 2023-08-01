@@ -8,12 +8,11 @@ import { Observable } from 'rxjs';
 })
 export class DatiService {
   private url:string = 'https://dummyjson.com/products';
-  public preferiti: Dati[] = [];
   constructor(private http:HttpClient) { }
   getAll():Observable<Dati>{
     return this.http.get<Dati>(this.url);
   }
   getById(id:number):Observable<Products>{
-    return this.http.get<Products>(this.url+'?=id'+id);
+    return this.http.get<Products>(this.url+'/'+id);
   }
 }

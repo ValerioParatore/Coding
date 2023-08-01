@@ -1,0 +1,101 @@
+<form [formGroup]="form">
+  <div formGroupName="authData">
+    <div class="form-group">
+      <input
+        type="text"
+        formControlName="nome"
+        class="form-control"
+        placeholder="Il tuo nome"
+      />
+      <span
+        classe="text-danger"
+        *ngIf="!isValid('authData.nome') && isTouched('authData.nome')"
+        >Inserisci un nome valido</span
+      >
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        formControlName="cognome"
+        class="form-control"
+        placeholder="Il tuo cognome"
+      />
+      <span
+        classe="text-danger"
+        *ngIf="!isValid('authData.cognome') && isTouched('authData.cognome')"
+        >Inserisci un cognome valido</span
+      >
+    </div>
+    <div class="form-group">
+      <input
+        type="password"
+        formControlName="password"
+        class="form-control"
+        placeholder="La tua password"
+      />
+      <span
+        classe="text-danger"
+        *ngIf="!isValid('authData.password') && isTouched('authData.password')"
+        >Inserisci una password valida</span
+      >
+    </div>
+    <div class="form-group">
+      <input
+        type="password"
+        formControlName="confPassword"
+        class="form-control"
+        placeholder="Conferma la tua password"
+      />
+      <span
+        classe="text-danger"
+        *ngIf="
+          !isValid('authData.confPassword') &&
+          isTouched('authData.confPassword')
+        "
+        >Conferma password</span
+      >
+    </div>
+    <div class="form-check">
+      <div *ngFor="let genere of generi">
+        <label class="form-check-label" [for]="genere">{{ genere }}</label>
+
+        <input
+          type="radio"
+          [id]="genere"
+          [value]="genere"
+          name="genere"
+          class="form-check-input"
+        />
+      </div>
+    </div>
+    <div class="input-group mb-3">
+      <input
+        formControlName="imgProfilo"
+        type="file"
+        class="form-control"
+        id="inputGroupFile02"
+      />
+      <label class="input-group-text" for="inputGroupFile02"
+        >Immagine Profilo</label
+      >
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        formControlName="username"
+        class="form-control"
+        placeholder="Il tuo username"
+      />
+      <span
+        classe="text-danger"
+        *ngIf="!isValid('authData.username') && isTouched('authData.username')"
+        >Inserisci un username valido</span
+      >
+    </div>
+    <div class="input-group">
+      <span class="input-group-text">Biografia</span>
+      <textarea class="form-control" aria-label="With textarea"></textarea>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
