@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "email": "allgreen00@live.com",
+      "password": "$2a$10$U6EUIh5.YsGX1aECqkNXkeD9FN.mi1887r2zIl2w2I9YYENb1IpGe",
+      "nome": "Valerio",
+      "cognome": "Paratore",
+      "eta": 5,
+      "id": 1
+    }
+  ]
+}
