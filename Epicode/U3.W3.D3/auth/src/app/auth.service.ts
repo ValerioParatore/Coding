@@ -25,9 +25,11 @@ export class AuthService {
   login(data:ILogin){
     return this.http.post<IAccessData>(this.loginUrl , data).pipe(tap(data => {
       this.authSubject.next(data);
+      console.log(this.authSubject, data);
+
       localStorage.setItem('accessData', JSON.stringify(data));
       const expDate = this.jwtHelper.getTokenExpirationDate(data.accessToken) as Date;
-      this.autoLogout(expDate)
+    //  this.autoLogout(expDate)
     }))
   }
   autoLogout(expDate:Date){
@@ -52,6 +54,7 @@ export class AuthService {
     if(!userJson)return
     const accessData:IAccessData = JSON.parse(userJson);
     if(this.jwtHelper.isTokenExpired(accessData.accessToken))return
+    console.log(accessData);
 
     this.authSubject.next(accessData)
   }

@@ -1,9 +1,9 @@
 <div class="container-fluid">
-  <h1>Benvenuto</h1>
+  <h1>Benvenuto {{ userInfo.nome }}</h1>
   <ul>
-    <li>La tua eta'</li>
-    <li>la tua email</li>
-    <li>il tuo id</li>
+    <li>La tua eta' {{ userInfo.eta }}</li>
+    <li>la tua email {{ userInfo.email }}</li>
+    <li>il tuo id {{ userInfo.id }}</li>
   </ul>
   <button class="btn btn-secondary" (click)="logout()">Logout</button>
 </div>
