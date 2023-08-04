@@ -7,6 +7,22 @@
       "cognome": "Paratore",
       "eta": 5,
       "id": 1
+    },
+    {
+      "email": "wewe@hoho.com",
+      "password": "$2a$10$OjKZmeB1B51GwfKv7qhOn.5EtHNFK.sFe2XSAXgOk/K.qbpC2nb2W",
+      "nome": "arutoro",
+      "cognome": "poretti",
+      "eta": 55,
+      "id": 2
+    },
+    {
+      "email": "ohoh@wewe.com",
+      "password": "$2a$10$OXs7jQNTF6NZI96HcXJRS.XHIMX8pTQ3zDbu1CRLLE.ZdTih9ovzO",
+      "nome": "nino",
+      "cognome": "frassica",
+      "eta": 888,
+      "id": 3
     }
   ]
 }

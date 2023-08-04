@@ -20,8 +20,9 @@ constructor(    private authSvc:AuthService,
   register(){
     this.authSvc.signUp(this.formData)
     .subscribe(res => {
+      alert('Registrazione effettuata con successo')
       console.log('registrato')
-      this.router.navigate(['/home'])
+      this.router.navigate(['/login'])
     })
   }
 
